@@ -15,19 +15,19 @@ inquirer
     },
     {
       type: 'input',
-      message: 'Email Address? ',
+      message: 'What is your email Address? ',
       name: 'email',
 
     },
     {
       type: 'input',
-      message: 'Project name? ',
+      message: 'What is the project name? ',
       name: 'project',
 
     },
     {
       type: 'input',
-      message: 'What is short description of your project?: ',
+      message: 'What is the short description of your project?: ',
       name: 'description',
 
     },
@@ -47,20 +47,20 @@ inquirer
     },
     {
       type: 'input',
-      message: 'What should be run to install dependencies?: ',
-      name: 'dependencies',
-      //this should be a default
+      message: 'What command should be run to install the program?: ',
+      name: 'install',
+      //npm i should be a default if left blank
     },
     {
       type: 'input',
-      message: 'What should be run to run tests?: ',
+      message: 'What command should be run to run tests?: ',
       name: 'tests',
-      //this should be a default
+      //nmp tests should be a default if left blank
     },
     {
       type: 'input',
       message: 'What does user need to know about using this repo?: ',
-      name: 'using',
+      name: 'usingRepo',
 
     },
     {
@@ -78,47 +78,52 @@ inquirer
   .then((response) => 
   fs.writeFile('README.md',
 `
-# Project Title 
+# Title 
 ${response.project}
 # Description 
 ${response.description}
 ## Table of Contents
-1. [Title](#title)
+1. [Title](#Title)
 2. [Description](#Description)
 3. [Installation](#Installation)
 4. [Usage](#Usage)
 5. [License](#License)
-6. [Tests](#Tests)
-6. [Questions](#Questions)
+6. [Contributing](#Contributing)
+7. [Tests](#Tests)
+8. [Questions](#Questions)
 # Installation
-${response.dependencies}
+${response.install}
 # Usage
-${response.using}
+${response.usingRepo}
 # License
 ![badge](https://img.shields.io/badge/license-${response.license}-brightgreen)
 This application is covered by the ${response.license} license. 
 
 # Contributing 
-Pull requests are encouraged. Please make sure to update as appropriate 
+${response.contributing}
 # Tests
-${response.tests}
+${response.tests}  
 # Questions:
 ## GitHub User name: 
 ${response.name}
+### Link to GitHub:
+ https://github.com/MelElson/Professional-Readme-Generator 
 ## Email address: 
 ${response.email}
 ## Code
 ![Changed HTML](./assets/images/ScreenshotGenerator.png)
+### Walkthrough
+![Demo of README](./assets/images/README.gif)
 `, (err) =>
-  err ? console.log(err) : console.log('README Created!'))
+  err ? console.log(err) : console.log('README Created Successfully!'))
 );
 
 
 
-// TODO: Create a function to initialize app
-// function init() {
+//TODO: Create a function to initialize app
+function init() {
 
-// }
+}
 
-// // Function call to initialize app
-// init();
+// Function call to initialize app
+init();
