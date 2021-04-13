@@ -108,7 +108,7 @@ ${response.name}
 ## Email address: 
 ${response.email}
 ## Code
-![Changed HTML](./assets/images/ScreenshotREADMEGENERATOR.png)
+![Changed HTML](./assets/images/ScreenshotGenerator.png)
 `, (err) =>
   err ? console.log(err) : console.log('README Created!'))
 );
