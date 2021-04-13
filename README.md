@@ -1,8 +1,8 @@
 
 # Project Title 
-vc
+README Generator
 # Description 
-d
+Create a README Generator that allows a user to customize a professional README.
 ## Table of Contents
 1. [Title](#title)
 2. [Description](#Description)
@@ -12,21 +12,21 @@ d
 6. [Tests](#Tests)
 6. [Questions](#Questions)
 # Installation
-e
+npm i
 # Usage
-g
+When starting generator answer question prompts to customize README.
 # License
-![badge](https://img.shields.io/badge/license-GPL3.0-brightgreen)
-This application is covered by the GPL3.0 license. 
+![badge](https://img.shields.io/badge/license-MIT-brightgreen)
+This application is covered by the MIT license. 
 
 # Contributing 
 Pull requests are encouraged. Please make sure to update as appropriate 
 # Tests
-f
+npm tests
 # Questions:
-## GitHub User name 
-a
-## Email address 
-b
+## GitHub User name: 
+MelElson
+## Email address: 
+MelElson
 ## Code
-![Changed HTML](./assets/images/code1.png)
+![Changed HTML](./assets/images/ScreenshotREADMEGENERATOR.png)
