@@ -2,7 +2,7 @@
 # Title 
 README Generator
 # Description 
-Create a README Generator that allows a user to customize a professional README
+Generate a professional readme
 ## Table of Contents
 1. [Title](#Title)
 2. [Description](#Description)
@@ -15,7 +15,7 @@ Create a README Generator that allows a user to customize a professional README
 # Installation
 npm i
 # Usage
-When starting generator answer question prompts to customize README
+Answer prompts to questions to generate readme
 # License
 ![badge](https://img.shields.io/badge/license-MIT-brightgreen)
 This application is covered by the MIT license. 
@@ -23,7 +23,7 @@ This application is covered by the MIT license.
 # Contributing 
 Pull requests encouraged
 # Tests
-npm tests  
+npm run tests  
 # Questions:
 ## GitHub User name: 
 MelElson

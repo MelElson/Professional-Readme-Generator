@@ -49,12 +49,14 @@ inquirer
       type: 'input',
       message: 'What command should be run to install the program?: ',
       name: 'install',
+      default: 'npm i'
       //npm i should be a default if left blank
     },
     {
       type: 'input',
       message: 'What command should be run to run tests?: ',
       name: 'tests',
+      default: 'npm run tests',
       //nmp tests should be a default if left blank
     },
     {
@@ -75,7 +77,9 @@ inquirer
 
   //}
 
-  .then((response) => 
+  .then(function(response)  {
+  
+    
   fs.writeFile('README.md',
 `
 # Title 
@@ -116,14 +120,13 @@ ${response.email}
 ![Demo of README](./assets/images/README.gif)
 `, (err) =>
   err ? console.log(err) : console.log('README Created Successfully!'))
-);
+})
 
+  
+// //TODO: Create a function to initialize app
+// function init() {
 
+// }
 
-//TODO: Create a function to initialize app
-function init() {
-
-}
-
-// Function call to initialize app
-init();
+// // Function call to initialize app
+// init();
