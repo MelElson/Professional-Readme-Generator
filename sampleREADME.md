@@ -1,8 +1,8 @@
 
 # Title 
-README Geneator 
+README Generator
 # Description 
-Create a README geneator that creates a README file based on input that the user answers for prompts. When the user enters input, the answers generator the README file input.  When user finishes prompts a sampleREADME.md file is created and saved.
+Create a README Generator that allows a user to customize a professional README
 ## Table of Contents
 1. [Title](#Title)
 2. [Description](#Description)
@@ -15,10 +15,10 @@ Create a README geneator that creates a README file based on input that the user
 # Installation
 npm i
 # Usage
-npm run tests
+When starting generator answer question prompts to customize README.
 # License
-![badge](https://img.shields.io/badge/license-adf-brightgreen)
-This application is covered by the adf license. 
+![badge](https://img.shields.io/badge/license-MIT-brightgreen)
+This application is covered by the MIT license. 
 
 # Contributing 
 Pull requests encouraged
@@ -26,11 +26,11 @@ Pull requests encouraged
 npm run tests  
 # Questions:
 ## GitHub User name: 
-this input is created by user input
+MelElson
 ### Link to GitHub:
  https://github.com/MelElson/Professional-Readme-Generator 
 ## Email address: 
-this input is created by user's input
+MelElson@email.com
 ## Code
 ![Changed HTML](./assets/images/ScreenshotGenerator.png)
 ### Walkthrough

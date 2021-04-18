@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-
+const path = require('path');
 const util = require('./utils/generateMarkdown');
 
 // TODO: Create an array of response for user input
@@ -9,30 +9,25 @@ const util = require('./utils/generateMarkdown');
 inquirer
   .prompt([
     {
-      type: 'input',
       message: 'GitHub username? ',
       name: 'name',
     },
     {
-      type: 'input',
       message: 'What is your email Address? ',
       name: 'email',
 
     },
     {
-      type: 'input',
       message: 'What is the project name? ',
       name: 'project',
 
     },
     {
-      type: 'input',
       message: 'What is the short description of your project?: ',
       name: 'description',
 
     },
-    {
-      type: 'list',
+    { type: 'list',
       message: 'What license should your project have?: ',
       name: 'license',
       choices: [
@@ -46,28 +41,24 @@ inquirer
       //this should be a list
     },
     {
-      type: 'input',
       message: 'What command should be run to install the program?: ',
       name: 'install',
       default: 'npm i'
       //npm i should be a default if left blank
     },
     {
-      type: 'input',
       message: 'What command should be run to run tests?: ',
       name: 'tests',
       default: 'npm run tests',
       //nmp tests should be a default if left blank
     },
     {
-      type: 'input',
       message: 'What does user need to know about using this repo?: ',
       name: 'usingRepo',
 
     },
     {
-      type: 'input',
-      message: 'What does user need to know about contributing to repo?: ',
+      message: 'What does the user need to know about contributing to repo?: ',
       name: 'contributing',
 
     },
@@ -80,7 +71,7 @@ inquirer
   .then(function(response)  {
   
     
-  fs.writeFile('README.md',
+    fs.writeFile(path.join(process.cwd(), 'sampleREADME.md'),
 `
 # Title 
 ${response.project}
@@ -123,10 +114,10 @@ ${response.email}
 })
 
   
-// //TODO: Create a function to initialize app
-// function init() {
+//TODO: Create a function to initialize app
+function init() {
 
-// }
+}
 
-// // Function call to initialize app
-// init();
+// Function call to initialize app
+init();
